@@ -12,7 +12,7 @@ compare(){
 }
 //draw the card
 draw(){
-    alert("d");
+
   const list=  document.getElementById("listCard");
   const newCard=document.createElement("div");
   newCard.className="flp-card";
@@ -26,14 +26,18 @@ draw(){
   const nc1=document.createElement("div");
   nc1.className='front';
 
-  const icon=document.createElement("i");
-  icon.innerHTML=`<i class="fas fa-cat"></i>`
- 
-nc1.appendChild(icon);
+
 
   const nc2=document.createElement("div");
   nc2.className='back'; 
   
+ const icon=document.createElement("i");
+  //icon.innerHTML=`<i class="fas fa-cat fa-8x "></i>`
+icon.className="fas fa-cat fa-8x icon"
+icon.style+=" text-align: center;"
+ 
+nc2.appendChild(icon);
+
   newCard.appendChild(nc1);
   newCard.appendChild(nc2);
   

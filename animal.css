@@ -31,3 +31,8 @@ body{
   .flip{
     transform:rotateY(-180deg);
   }
+  .icon{
+    margin-top: 30px;
+    margin-left: 10px;
+  }
+ 
