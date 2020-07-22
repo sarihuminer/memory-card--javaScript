@@ -2,17 +2,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-   
- 
-    <script src="./animal.js" defer></script>
+
+
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="./animal.js" defer></script>
 
 <link rel="stylesheet" type="text/css" href="./animal.css">
+<script type="module">
+      import { Board } from "./Board.js";
+        let b = new Board();
+        b.fillArr();
+       document.body.appendChild(b.drawArr());
+</script>
 </head>
 <body>
-<div class="wrapper" id="listCard">
+<!-- <div class="wrapper" id="listCard">
 
-</div>
+</div> -->
 
 </body>
 </html>
