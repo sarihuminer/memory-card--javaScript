@@ -47,7 +47,7 @@ createIcon(){
         newCard.appendChild(nc2);
         
 
-        newCard.addEventListener('click',()=>this.clickCard(icon,newCard),false);
+        newCard.addEventListener('click',this.clickCard,false);
            
 
        
@@ -56,7 +56,12 @@ createIcon(){
 
         return newCard;
     }
-    clickCard(i,newCard){
+    clickCard($event){
+        let i=event.currentTarget.childNodes[1].childNodes[0];
+        debugger;
+      let  newCard=event.target.parentElement;
+        
+debugger;
        newCard.classList.toggle('flip');
        debugger;
        if(clickCard==null){
