@@ -5,11 +5,14 @@ body{
       perspective:500px;
   }
   .flp-card{
+    margin:50px;
+    display: inline-block;
     width:150px;
     height:200px;
     transform-style:preserve-3d;
     position:relative;
     transition:transform .5s linear;
+    border: black 5px solid;
   }
   
   .back{
@@ -19,9 +22,13 @@ body{
     transform:rotateY(180deg);
     width:100%;
     height:100%;
-    
+   
   }
   .front{
+    
+    font-size: 100px;
+    font-weight: bold;
+    text-align: center;
     position:absolute;
     background:lightcoral;
     width:100%;

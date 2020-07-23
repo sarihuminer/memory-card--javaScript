@@ -33,9 +33,11 @@ createIcon(){
         newCard.className="flp-card";
         const nc1=document.createElement("div");
         nc1.className='front';
+        nc1.innerText="?"   ;  
+ 
         const nc2=document.createElement("div");
         nc2.className='back'; 
-                         
+                  
       nc2.appendChild(icon);
       
         newCard.appendChild(nc1);
