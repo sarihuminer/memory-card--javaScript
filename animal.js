@@ -43,7 +43,7 @@ createIcon(){
         
        // list.appendChild(newCard);
       
-        document.querySelector('.flp-card').addEventListener('click',function(e){
+       newCard.addEventListener('click',function(e){
         
           this.classList.toggle('flip');
           

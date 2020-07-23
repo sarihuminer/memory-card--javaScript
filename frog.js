@@ -1,6 +1,6 @@
 import { Animal } from "./animal.js";
 
-export default class Elephant extends Animal{
+export  class Frog extends Animal{
 
     constructor(name,icon){
     super(name,icon);
