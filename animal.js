@@ -58,29 +58,29 @@ createIcon(){
     }
     clickCard(i,newCard){
        newCard.classList.toggle('flip');
-        debugger;
+       debugger;
        if(clickCard==null){
            clickCard=i.className;
            selectedCard=newCard;
            console.log(clickCard);
        }
        else{
-           if(clickCard==i.className)
-           {
-               alert('won!!!!!');
-      
+           if(clickCard!=i.className){
+          
+                setTimeout(function(){ 
+                    debugger;
+                    newCard.classList.toggle('flip');
+                    selectedCard.classList.toggle('flip');
+                    console.log(clickCard);
+                    clickCard=null;
+                    selectedCard=null;
+                 }, 3000);
             }
-            setTimeout(function(){ 
-                newCard.classList.toggle('flip');
-                selectedCard.classList.toggle('flip');
-                console.log(clickCard);
-            //console.log(document.getElementsByClassName(clickCard)[0].classList.toggle('flip'));
-               // document.getElementsByClassName(clickCard).classList.toggle('flip');
+            else{
                 clickCard=null;
                 selectedCard=null;
-             }, 3000);
-           
-       }
+            }
 
     }
+}
 }
