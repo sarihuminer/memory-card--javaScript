@@ -6,12 +6,22 @@ import {Dragon} from './dragon.js';
 import {Frog} from './frog.js';
 import {Fish} from './fish.js';
 import {Horse} from './hourse.js';
-
+import {Spider} from './spider.js';
 
 export  class Board {
     constructor() {
         this.arr = [];
+        this.animals=[];
     }
+    mixCards(){
+        for(let i=0;this.arr.length>0;i++){
+         const indexrandomElement=Math.floor(Math.random() * this.arr.length);
+         const randomElement = this.arr[indexrandomElement];
+         this.animals[i]=randomElement;
+         this.arr.splice(indexrandomElement, 1);
+        }
+       console.log(this.animals);
+      }   
     fillArr() {
         this.arr[0] = new Bird("bird",`<i class="fas fa-kiwi-bird fa-8x "></i>`);
         this.arr[1] = new Bird("bird",`<i class="fas fa-kiwi-bird fa-8x "></i>`);
@@ -29,12 +39,13 @@ export  class Board {
         this.arr[13] = new Fish("fish",`<i class="fas fa-fish fa-8x "></i>`);
         this.arr[14] = new Horse("horse",`<i class="fas fa-horse fa-8x "></i>`);
         this.arr[15] = new Horse("horse",`<i class="fas fa-horse fa-8x "></i>`);
-        
-
+        this.arr[16] = new Spider("spider",`<i class="fas fa-spider fa-8x "></i>`);
+        this.arr[17] = new Spider("spider",`<i class="fas fa-spider fa-8x "></i>`);
+       
     }
     drawArr() {
         let r = document.createElement("div");
-        this.arr.forEach(t => r.appendChild(t.draw()))
+        this.animals.forEach(t => r.appendChild(t.draw()))
         return r;
     }
     

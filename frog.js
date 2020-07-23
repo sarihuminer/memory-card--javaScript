@@ -13,6 +13,7 @@ compare(){
 draw(){
  let i= super.createIcon(); 
  i.innerHTML=this.icon;
+ i.className=this.name;
 return super.createCard(i);
 }}
 

@@ -1,4 +1,7 @@
+let clickCard=null;
+let selectedCard=null;
  export class Animal {
+    
 
     constructor(name,icon) {
         this._name = name;
@@ -43,13 +46,41 @@ createIcon(){
         newCard.appendChild(nc1);
         newCard.appendChild(nc2);
         
-       // list.appendChild(newCard);
-      
-       newCard.addEventListener('click',function(e){
-        
-          this.classList.toggle('flip');
-          
-        } , false)
+
+        newCard.addEventListener('click',()=>this.clickCard(icon,newCard),false);
+           
+
+       
+
+
+
         return newCard;
+    }
+    clickCard(i,newCard){
+       newCard.classList.toggle('flip');
+        debugger;
+       if(clickCard==null){
+           clickCard=i.className;
+           selectedCard=newCard;
+           console.log(clickCard);
+       }
+       else{
+           if(clickCard==i.className)
+           {
+               alert('won!!!!!');
+      
+            }
+            setTimeout(function(){ 
+                newCard.classList.toggle('flip');
+                selectedCard.classList.toggle('flip');
+                console.log(clickCard);
+            //console.log(document.getElementsByClassName(clickCard)[0].classList.toggle('flip'));
+               // document.getElementsByClassName(clickCard).classList.toggle('flip');
+                clickCard=null;
+                selectedCard=null;
+             }, 3000);
+           
+       }
+
     }
 }

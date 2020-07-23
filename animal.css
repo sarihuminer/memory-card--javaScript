@@ -5,7 +5,8 @@ body{
       perspective:500px;
   }
   .flp-card{
-    margin:50px;
+    margin-left:20px;
+    margin-bottom:20 ;
     display: inline-block;
     width:150px;
     height:200px;
@@ -14,7 +15,12 @@ body{
     transition:transform .5s linear;
     border: black 5px solid;
   }
-  
+  #h1{
+    font-size: 20px;
+    font-weight: bold initial;
+    font-family: 'Times New Roman', Times, serif;
+    color: lightcoral;
+  }
   .back{
     position:absolute;
     backface-visibility:hidden;

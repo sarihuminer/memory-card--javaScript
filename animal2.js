@@ -37,7 +37,7 @@ draw(){
 animalPlace.map((elm)=>{
   const newCard=document.createElement("div");
   newCard.className="flp-card";
-  debugger;
+  
   const nc1=document.createElement("div");
   nc1.className='front';
   const nc2=document.createElement("div");

@@ -1,6 +1,6 @@
 import { Animal } from "./animal.js";
 
-export  class Fish extends Animal{
+export  class Spider extends Animal{
 
     constructor(name,icon){
     super(name,icon);
@@ -13,7 +13,6 @@ compare(){
 draw(){
  let i= super.createIcon(); 
  i.innerHTML=this.icon;
- i.className=this.name;
 return super.createCard(i);
 }}
 
